@@ -1,3 +1,4 @@
+import 'package:crimetrack/constant.dart';
 import 'package:crimetrack/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'TrafficCam'),
+      home: MyHomePage(title: '$name'),
     );
   }
 }

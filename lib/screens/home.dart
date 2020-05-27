@@ -45,14 +45,17 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 8),
             Text(
                 'Help fight trafficking by uploading photos of your hotel room. these photos will  be used to determine where perpetrators of sex trafficking are commiting their crimes'),
-            TextFormField(),
-            TextFormField(),
+            TextFormField(
+              decoration: InputDecoration(hintText: 'Hotel Name'),
+            ),
+            TextFormField(
+              decoration: InputDecoration(hintText: 'Room'),
+            ),
             SizedBox(height: 10),
             Column(
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-              
                   children: <Widget>[
                     Container(
                         decoration: BoxDecoration(
@@ -82,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         child: IconButton(
                             icon: Icon(Icons.camera_alt), onPressed: () {})),
-                   Container(width: 10),
+                    Container(width: 10),
                     Container(
                         decoration: BoxDecoration(
                           color: Colors.amberAccent,
