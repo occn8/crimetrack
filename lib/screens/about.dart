@@ -13,10 +13,14 @@ class _AboutState extends State<About> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About'),
+        title: Text(
+          'About',
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
+        centerTitle: true,
       ),
       body: Scrollbar(
-              child: Markdown(data: markDownData, onTapLink: ontapLink),
+        child: Markdown(data: markDownData, onTapLink: ontapLink),
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:crimetrack/constant.dart';
 import 'package:crimetrack/screens/about.dart';
 import 'package:crimetrack/screens/contact.dart';
-import 'package:crimetrack/widgets/cameras.dart';
+import 'package:crimetrack/widgets/content_input.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -17,7 +17,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(
+          widget.title,
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
         actions: <Widget>[
           Container(
             width: 60,
@@ -41,49 +44,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Container(
-        padding: new EdgeInsets.all(5),
-        child: ListView(
-          children: <Widget>[
-            SizedBox(height: 8),
-            Text('$welcome'),
-            SizedBox(height: 8),
-            TextFormField(
-              textAlign: TextAlign.center,
-              decoration: InputDecoration(hintText: 'Hotel Name'),
-            ),
-            TextFormField(
-              textAlign: TextAlign.center,
-              decoration: InputDecoration(hintText: 'Room'),
-            ),
-            SizedBox(height: 10),
-            Cameras(),
-            // SizedBox(height: 10),
-            // Container(
-            //   margin: new EdgeInsets.symmetric(horizontal: 40),
-            //   child: RaisedButton(
-                
-            //     onPressed: () {
-            //       showDialog<String>(
-            //           context: context,
-            //           builder: (BuildContext context) => AlertDialog(
-            //                 title: const Text('Submitted'),
-            //                 content: Text('successfully'),
-            //                 actions: <Widget>[
-            //                   FlatButton(
-            //                       onPressed: () {
-            //                         Navigator.pop(context);
-            //                       },
-            //                       child: Text('OK'))
-            //                 ],
-            //               ));
-            //     },
-            //     child: Text('SUBMIT'),
-            //   ),
-            // ),
-            SizedBox(height: 10),
-            Text('$descript')
-          ],
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Container(
+          padding: new EdgeInsets.all(8),
+          child: ListView(
+            children: <Widget>[
+              SizedBox(height: 5),
+              Divider(indent: 30, endIndent: 30, color: Colors.amber),
+              Text('$welcome'),
+              Divider(indent: 40, endIndent: 40, color: Colors.amber),
+              SizedBox(height: 5),
+              ContentInput(),
+              SizedBox(height: 10),
+              Divider(indent: 30, endIndent: 30, color: Colors.amber),
+              Text('$descript'),
+              Divider(indent: 40, endIndent: 40, color: Colors.amber),
+            ],
+          ),
         ),
       ),
     );

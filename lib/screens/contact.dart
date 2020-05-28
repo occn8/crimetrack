@@ -8,14 +8,16 @@ class Contact extends StatefulWidget {
   _ContactState createState() => _ContactState();
 }
 
-
-
 class _ContactState extends State<Contact> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contact'),
+        title: Text(
+          'Contact',
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
+        centerTitle: true,
       ),
       body: Scrollbar(
         child: Markdown(data: markDownData2, onTapLink: ontapLink),
