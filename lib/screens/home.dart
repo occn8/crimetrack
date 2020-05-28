@@ -1,7 +1,7 @@
 import 'package:crimetrack/screens/about.dart';
 import 'package:crimetrack/screens/contact.dart';
+import 'package:crimetrack/widgets/cameras.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -11,29 +11,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  // File _image;
-
-  // Future getImage() async {
-  //   var image = await ImagePicker.pickImage(source: ImageSource.camera);
-
-  //   setState(() {
-  //     _image = image;
-  //   });
-  // }
-  // return Scaffold(
-  //         body:  Center(
-  //       child: _image == null
-  //           ? Text('No image selected.')
-  //           : Image.file(_image),
-  //     ),
-  //     floatingActionButton: FloatingActionButton(
-  //       onPressed: getImage,
-  //       tooltip: 'Pick Image',
-  //       child: Icon(Icons.add_a_photo),
-  //     ),
-  //   );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,51 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: InputDecoration(hintText: 'Room'),
             ),
             SizedBox(height: 10),
-            Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        decoration: BoxDecoration(
-                          color: Colors.amberAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: IconButton(
-                            icon: Icon(Icons.camera_alt), onPressed: () {})),
-                    Container(width: 10),
-                    Container(
-                        decoration: BoxDecoration(
-                          color: Colors.amberAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: IconButton(
-                            icon: Icon(Icons.camera_alt), onPressed: () {})),
-                  ],
-                ),
-                SizedBox(height: 5),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        decoration: BoxDecoration(
-                          color: Colors.amberAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: IconButton(
-                            icon: Icon(Icons.camera_alt), onPressed: () {})),
-                    Container(width: 10),
-                    Container(
-                        decoration: BoxDecoration(
-                          color: Colors.amberAccent,
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                        child: IconButton(
-                            icon: Icon(Icons.camera_alt), onPressed: () {})),
-                  ],
-                ),
-              ],
-            ),
+            Cameras(),
             SizedBox(height: 10),
             Text(
                 'You can submit up to four photos by tapping on the camera icons above. Not sure what pictures to take? We recommend taking two pictures for the entire room')
