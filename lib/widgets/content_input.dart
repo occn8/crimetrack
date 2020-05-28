@@ -228,9 +228,14 @@ class _ContentInputState extends State<ContentInput> {
                   _controller1.clear();
                   _controller2.clear();
                 }
-              },
+              },elevation: 4,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               padding: new EdgeInsets.symmetric(horizontal: 60),
-              child: Text('SUBMIT'),
+              child: Text(
+                'SUBMIT',
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
             ),
           ),
         ],
