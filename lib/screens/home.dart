@@ -1,3 +1,4 @@
+import 'package:crimetrack/constant.dart';
 import 'package:crimetrack/screens/about.dart';
 import 'package:crimetrack/screens/contact.dart';
 import 'package:crimetrack/widgets/cameras.dart';
@@ -45,20 +46,43 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           children: <Widget>[
             SizedBox(height: 8),
-            Text(
-                'Help fight trafficking by uploading photos of your hotel room. these photos will  be used to determine where perpetrators of sex trafficking are commiting their crimes'),
+            Text('$welcome'),
             SizedBox(height: 8),
             TextFormField(
+              textAlign: TextAlign.center,
               decoration: InputDecoration(hintText: 'Hotel Name'),
             ),
             TextFormField(
+              textAlign: TextAlign.center,
               decoration: InputDecoration(hintText: 'Room'),
             ),
             SizedBox(height: 10),
             Cameras(),
+            // SizedBox(height: 10),
+            // Container(
+            //   margin: new EdgeInsets.symmetric(horizontal: 40),
+            //   child: RaisedButton(
+                
+            //     onPressed: () {
+            //       showDialog<String>(
+            //           context: context,
+            //           builder: (BuildContext context) => AlertDialog(
+            //                 title: const Text('Submitted'),
+            //                 content: Text('successfully'),
+            //                 actions: <Widget>[
+            //                   FlatButton(
+            //                       onPressed: () {
+            //                         Navigator.pop(context);
+            //                       },
+            //                       child: Text('OK'))
+            //                 ],
+            //               ));
+            //     },
+            //     child: Text('SUBMIT'),
+            //   ),
+            // ),
             SizedBox(height: 10),
-            Text(
-                'You can submit up to four photos by tapping on the camera icons above. Not sure what pictures to take? We recommend taking two pictures for the entire room')
+            Text('$descript')
           ],
         ),
       ),
