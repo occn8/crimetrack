@@ -1,6 +1,7 @@
 import 'package:crimetrack/screens/about.dart';
 import 'package:crimetrack/screens/contact.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -10,9 +11,33 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  // File _image;
+
+  // Future getImage() async {
+  //   var image = await ImagePicker.pickImage(source: ImageSource.camera);
+
+  //   setState(() {
+  //     _image = image;
+  //   });
+  // }
+  // return Scaffold(
+  //         body:  Center(
+  //       child: _image == null
+  //           ? Text('No image selected.')
+  //           : Image.file(_image),
+  //     ),
+  //     floatingActionButton: FloatingActionButton(
+  //       onPressed: getImage,
+  //       tooltip: 'Pick Image',
+  //       child: Icon(Icons.add_a_photo),
+  //     ),
+  //   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: true,
       appBar: AppBar(
         title: Text(widget.title),
         actions: <Widget>[
@@ -40,11 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         padding: new EdgeInsets.all(5),
-        child: Column(
+        child: ListView(
           children: <Widget>[
             SizedBox(height: 8),
             Text(
                 'Help fight trafficking by uploading photos of your hotel room. these photos will  be used to determine where perpetrators of sex trafficking are commiting their crimes'),
+            SizedBox(height: 8),
             TextFormField(
               decoration: InputDecoration(hintText: 'Hotel Name'),
             ),
