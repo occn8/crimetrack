@@ -188,7 +188,11 @@ class _ContentInputState extends State<ContentInput> {
                   return;
                 }
                 if (_formKey.currentState.validate()) {
-                  if (_image1 != null && _image2 != null) {
+                  if ((_image1 != null && _image2 != null) ||
+                      (_image1 != null && _image3 != null) ||
+                      (_image1 != null && _image4 != null) ||
+                      (_image2 != null && _image3 != null) ||
+                      (_image3 != null && _image4 != null)) {
                     showDialog<String>(
                       context: context,
                       builder: (BuildContext context) => AlertDialog(
@@ -228,7 +232,8 @@ class _ContentInputState extends State<ContentInput> {
                   _controller1.clear();
                   _controller2.clear();
                 }
-              },elevation: 4,
+              },
+              elevation: 4,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
               padding: new EdgeInsets.symmetric(horizontal: 60),
