@@ -1,4 +1,4 @@
-import 'package:crimetrack/constant.dart';
+import 'package:crimetrack/constants/constant.dart';
 import 'package:crimetrack/screens/home.dart';
 import 'package:flutter/material.dart';
 
