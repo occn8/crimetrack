@@ -23,9 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         actions: <Widget>[
           Container(
-            width: 60,
+            width: 65,
             child: IconButton(
-              icon: Text('About'),
+              icon: Text('About',style: TextStyle(fontSize: 14),),
               onPressed: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => About()));
@@ -33,9 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
-            width: 75,
+            width: 80,
             child: IconButton(
-              icon: Text('Contact'),
+              icon: Text('Contact',style: TextStyle(fontSize: 14),),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Contact()));
