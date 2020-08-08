@@ -196,8 +196,8 @@ class _ContentInputState extends State<ContentInput> {
                     showDialog<String>(
                       context: context,
                       builder: (BuildContext context) => AlertDialog(
-                        title: const Text('Submitted'),
-                        content: Text('successfully'),
+                        title: const Text('Submitted',style: TextStyle(fontWeight: FontWeight.w800),),
+                        content: Text('successfully. Thank you Ref-No: 456392'),
                         actions: <Widget>[
                           FlatButton(
                               onPressed: () {
